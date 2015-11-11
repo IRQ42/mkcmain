@@ -123,6 +123,7 @@ int main(void)
     }
 
     // try to close the file
+    errno = 0;
     if (fclose(file)) {
         perror("fclose()");
         free(filepath);
