@@ -53,7 +53,7 @@ int main(void)
     errno  = 0;
     cw_dir = get_current_dir_name();
     if(NULL == cw_dir) {
-        perror("get_current_dir_name()");
+        perror("get_current_dir_name");
         die(EXIT_FAILURE, "could not get current directory name");
     }
 
@@ -125,7 +125,7 @@ int main(void)
     // try to close the file
     errno = 0;
     if (fclose(file)) {
-        perror("fclose()");
+        perror("fclose");
         free(filepath);
         die(EXIT_FAILURE, "encountered error during attempt to close file");
     }
